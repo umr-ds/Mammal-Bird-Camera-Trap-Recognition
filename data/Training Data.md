@@ -90,7 +90,3 @@ We trained our model on the following bird and mammal species:
 | Turdus_philomelos        | 2684           |                          |                |
 | Turdus_pilaris           | 9738           |                          |                |
 | Turdus_viscivorus        | 1388           |                          |                |
-
-
-## Marburg Open Forest (MOF) data set
-To download our Marburg Open Forest test data set see [Data Download.ipynb]
