@@ -1,8 +1,5 @@
-data/img/
-data/md/
-data/MOF.tar.gz
-models/ConvNextBase/
-models/EfficientNetV2/
-models/ConvNextBase.tar.gz
-models/EfficientNetV2.tar.gz
-**/.ipynb_checkpoints/
+data/*/
+data/*.tar
+models/*/
+models/*.tar
+**/.ipynb_checkpoints/**

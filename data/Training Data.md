@@ -3,90 +3,90 @@
 ## Datasets
 Our training data was collected from the following datasets:
 
-| Data Set Name                    | Recording Locations           | Species Total | Images Total | Relevant Species | Used Images |
-|---------------------------------:|------------------------------:|--------------:|-------------:|-----------------:|------------:|
-| Caltech Camera Traps             | Southwestern USA              | 21            | ~240,000     | 3                | 10,954      |
-| ENA24-detection                  | Eastern North America         | 23            | ~10,000      | 5                | 2,232       |
-| Idaho Camera Traps               | USA                           | 62            | 1.5M         | 2                | 107,599     |
-| Missouri Camera Traps            | USA                           | 21            | ~25,000      | 8                | 11,134      |
-| North American Camera Traps      | USA                           | 28            | 3.7M         | 9                | 554,447     |
-| WCS Camera Traps                 | Worldwide (12 countries)      | 675           | ~1.4M        | 7                | 8,763       |
-| Rodent \cite{Imholt2021Nagetier} | Germany                       | 41            | ~14,000      | 25               | 13,756      |
-| Tierschnappschuss                | Southern Germany              | 41            | ~170,000     | 18               | 134,209     |
-| Kaggle Birds                     | Worldwide (Internet Searches) | 525           | ~90,000      | 6                | 1,040       |
-| North American Birds             | North America                 | 400           | ~48,000      | 2                | 426         |
-| eMammal                          | Worldwide (Crawled Subset)    |               |              | 16               | 14,013      |
-| InatCrawl                        | Worldwide (Crawled Subset)    |               |              | 88               | 404,044     |
-| WebCral                          | Worldwide (Crawled Subset)    |               |              | 7                | 1,342       |
-| Marburg Open Forest              | Germany                       |               |              | 19               | 2,336       |
+| Data Set Name                    | Recording Locations           | Species Total | Images Total | Relevant Species | Used Boxes | train Boxes | val/test Boxes |
+|---------------------------------:|------------------------------:|--------------:|-------------:|-----------------:|-----------:|------------:|---------------:|
+| Caltech Camera Traps             | Southwestern USA              | 21            | ~240,000     | 3                | 10,915     | 9,882       | 1,033          |
+| ENA24-detection                  | Eastern North America         | 23            | ~10,000      | 5                | 2,232      | 1,788       | 444            |
+| Idaho Camera Traps               | USA                           | 62            | ~1.5M        | 2                | 75,699     | 74,699      | 1000           |
+| Missouri Camera Traps            | USA                           | 21            | ~25,000      | 8                | 11,517     | 9,768       | 1,749          |
+| North American Camera Traps      | USA                           | 28            | ~3.7M        | 9                | 584,436    | 581,157     | 3,279          |
+| WCS Camera Traps                 | Worldwide (12 countries)      | 675           | ~1.4M        | 7                | 10,820     | 9,805       | 1,015          |
+| Rodent \cite{Imholt2021Nagetier} | Germany                       | 41            | ~14,000      | 25               | 14,327     | 12,645      | 1,682          |
+| Tierschnappschuss                | Southern Germany              | 41            | ~170,000     | 18               | 140,635    | 135,675     | 4,960          |
+| Kaggle Birds                     | Worldwide (Internet Searches) | 525           | ~90,000      | 6                | 1,104      | 886         | 218            |
+| North American Birds             | North America                 | 400           | ~48,000      | 2                | 429        | 344         | 85             |
+| eMammal                          | Worldwide (Crawled Subset)    |               |              | 16               | 13,485     | 11,140      | 2,345          |
+| InatCrawl                        | Worldwide (Crawled Subset)    |               |              | 88               | 406,366    | 377,234     | 29,132         |
+| WebCral                          | Worldwide (Crawled Subset)    |               |              | 7                | 1,414      | 1,135       | 279            |
+| Marburg Open Forest              | Germany                       |               |              | 19               | 2,420      | 0           | 2,420          |
 
 
 ## Classes
 We trained our model on the following bird and mammal species:
 
 
-| Birds                    | Bounding Boxes | Mammals                  | Bounding Boxes |
-|--------------------------|---------------:|--------------------------|---------------:|
-| Accipiter_nisus          | 3331           | Apodemus_sylvaticus      | 1320           |
-| Accipiter_gentilis       | 3770           | Canis_familiaris         | 11595          |
-| Aegolius_funereus        | 468            | Canis_lupus              | 13370          |
-| Alopochen_aegyptiaca     | 13168          | Capreolus_capreolus      | 53532          |
-| Anthus_trivialis         | 908            | Cervus_elaphus           | 291283         |
-| Asio_flammeus            | 4042           | Erinaceus_europaeus      | 4499           |
-| Asio_otus                | 4432           | Felis_catus              | 45172          |
-| Bubo_bubo                | 882            | Felis_silvestris         | 734            |
-| Buteo_buteo              | 8848           | Glis_glis                | 495            |
-| Caprimulgus_europaeus    | 241            | Lepus_europaeus          | 9500           |
-| Certhia_brachydactyla    | 1172           | Lynx_lynx                | 414            |
-| Certhia_familiaris       | 1571           | Martes_foina             | 4705           |
-| Chloris_chloris          | 6856           | Martes_martes            | 1494           |
-| Circaetus_gallicus       | 750            | Meles_meles              | 5520           |
-| Clanga_clanga            | 192            | Mustela_erminea          | 1167           |
-| Clanga_pomarina          | 183            | Mustela_nivalis          | 1019           |
-| Coloeus_monedula         | 10288          | Mustela_putorius         | 385            |
-| Columba_oenas            | 962            | Nyctereutes_procyonoides | 462            |
-| Columba_palumbus         | 10404          | Oryctolagus_cuniculus    | 6504           |
-| Corvus_corax             | 13303          | Ovis_gmelini             | 207            |
-| Corvus_corone            | 5900           | Procyon_lotor            | 62705          |
-| Dendrocopos_leucotos     | 1249           | Sciurus_carolinensis     | 52568          |
-| Dendrocopos_major        | 12094          | Sciurus_vulgaris         | 12046          |
-| Dendrocoptes_medius      | 827            | Sus_scrofa               | 191497         |
-| Dryocopus_martius        | 1613           | Vulpes_vulpes            | 50933          |
-| Erithacus_rubecula       | 10346          | Empty                    | 147182         |
-| Falco_subbuteo           | 980            |                          |                |
-| Ficedula_hypoleuca       | 1779           |                          |                |
-| Fringilla_coelebs        | 13367          |                          |                |
-| Fringilla_montifringilla | 2741           |                          |                |
-| Gallinago_media          | 24             |                          |                |
-| Garrulus_glandarius      | 5905           |                          |                |
-| Glaucidium_passerinum    | 1028           |                          |                |
-| Hieraaetus_pennatus      | 971            |                          |                |
-| Motacilla_alba           | 11334          |                          |                |
-| Muscicapa_striata        | 1904           |                          |                |
-| Nucifraga_caryocatactes  | 412            |                          |                |
-| Parus_major              | 16365          |                          |                |
-| Parus_palustris          | 1413           |                          |                |
-| Parus_caeruleus          | 9967           |                          |                |
-| Periparus_ater           | 2399           |                          |                |
-| Pernis_apivorus          | 701            |                          |                |
-| Phylloscopus_collybita   | 2667           |                          |                |
-| Phylloscopus_sibilatrix  | 378            |                          |                |
-| Phylloscopus_trochilus   | 976            |                          |                |
-| Picoides_tridactylus     | 445            |                          |                |
-| Picus_canus              | 851            |                          |                |
-| Picus_viridis            | 3015           |                          |                |
-| Prunella_modularis       | 1847           |                          |                |
-| Scolopax_rusticola       | 196            |                          |                |
-| Sitta_europaea           | 4720           |                          |                |
-| Strix_aluco              | 1533           |                          |                |
-| Strix_nebulosa           | 2046           |                          |                |
-| Strix_uralensis          | 2090           |                          |                |
-| Sturnus_vulgaris         | 41867          |                          |                |
-| Sylvia_atricapilla       | 4051           |                          |                |
-| Sylvia_borin             | 202            |                          |                |
-| Troglodytes_troglodytes  | 2129           |                          |                |
-| Turdus_iliacus           | 1759           |                          |                |
-| Turdus_merula            | 19979          |                          |                |
-| Turdus_philomelos        | 2684           |                          |                |
-| Turdus_pilaris           | 9738           |                          |                |
-| Turdus_viscivorus        | 1388           |                          |                |
+| Bird species             | train Boxes | val Boxes | Mammal species           | train Boxes | val Boxes |
+|-------------------------:|------------:|----------:|-------------------------:|------------:|----------:|
+| Accipiter_gentilis       |        3018 |       538 | Apodemus_sylvaticus      | 1135        | 283       |
+| Accipiter_nisus          |        2907 |       500 | Canis_familiaris         | 9760        | 2170      |
+| Aegolius_funereus        |         398 |        99 | Canis_lupus              | 11832       | 1614      |
+| Alopochen_aegyptiaca     |       12427 |       539 | Capreolus_capreolus      | 52890       | 1741      |
+| Anthus_trivialis         |         727 |       181 | Cervus_elaphus           | 299534      | 1505      |
+| Asio_flammeus            |        3549 |       500 | Erinaceus_europaeus      | 4014        | 788       |
+| Asio_otus                |        4252 |       540 | Felis_catus              | 47156       | 1096      |
+| Bubo_bubo                |         766 |       191 | Felis_silvestris         | 611         | 149       |
+| Buteo_buteo              |        8034 |       512 | Glis_glis                | 426         | 106       |
+| Caprimulgus_europaeus    |         207 |        51 | Lepus_europaeus          | 7925        | 1699      |
+| Certhia_brachydactyla    |         992 |       248 | Lynx_lynx                | 352         | 86        |
+| Certhia_familiaris       |        1365 |       341 | Martes_foina             | 4401        | 697       |
+| Chloris_chloris          |        6363 |       500 | Martes_martes            | 1273        | 314       |
+| Circaetus_gallicus       |         581 |       145 | Meles_meles              | 4893        | 876       |
+| Clanga_clanga            |         155 |        38 | Mustela_erminea          | 1007        | 251       |
+| Clanga_pomarina          |         140 |        34 | Mustela_nivalis          | 893         | 220       |
+| Coloeus_monedula         |        8637 |       500 | Mustela_putorius         | 332         | 82        |
+| Columba_oenas            |         746 |       186 | Nyctereutes_procyonoides | 390         | 96        |
+| Columba_palumbus         |        9176 |       500 | Oryctolagus_cuniculus    | 5022        | 1000      |
+| Corvus_corax             |       11700 |      1025 | Ovis_gmelini             | 148         | 37        |
+| Corvus_corone            |        5076 |       502 | Procyon_lotor            | 63470       | 1869      |
+| Dendrocopos_leucotos     |        1051 |       262 | Sciurus_carolinensis     | 53743       | 1063      |
+| Dendrocopos_major        |       12210 |       508 | Sciurus_vulgaris         | 11811       | 1128      |
+| Dendrocoptes_medius      |         693 |       173 | Sus_scrofa               | 196089      | 2601      |
+| Dryocopus_martius        |        1354 |       337 | Vulpes_vulpes            | 51067       | 1683      |
+| Erithacus_rubecula       |       10178 |       507 | Empty                    | 128055      | 1678      |
+| Falco_subbuteo           |         772 |       193 |                          |             |           |
+| Ficedula_hypoleuca       |        1476 |       369 |                          |             |           |
+| Fringilla_coelebs        |       13011 |       500 |                          |             |           |
+| Fringilla_montifringilla |        1962 |       490 |                          |             |           |
+| Gallinago_media          |          20 |         4 |                          |             |           |
+| Garrulus_glandarius      |        5538 |       604 |                          |             |           |
+| Glaucidium_passerinum    |         839 |       209 |                          |             |           |
+| Hieraaetus_pennatus      |         767 |       191 |                          |             |           |
+| Motacilla_alba           |       11045 |       500 |                          |             |           |
+| Muscicapa_striata        |        1560 |       389 |                          |             |           |
+| Nucifraga_caryocatactes  |         332 |        82 |                          |             |           |
+| Parus_caeruleus          |        9966 |       500 |                          |             |           |
+| Parus_major              |       16605 |       538 |                          |             |           |
+| Parus_palustris          |        1159 |       289 |                          |             |           |
+| Periparus_ater           |        1998 |       499 |                          |             |           |
+| Pernis_apivorus          |         540 |       134 |                          |             |           |
+| Phylloscopus_collybita   |        2237 |       500 |                          |             |           |
+| Phylloscopus_sibilatrix  |         309 |        77 |                          |             |           |
+| Phylloscopus_trochilus   |         801 |       200 |                          |             |           |
+| Picoides_tridactylus     |         369 |        92 |                          |             |           |
+| Picus_canus              |         712 |       177 |                          |             |           |
+| Picus_viridis            |        2624 |       513 |                          |             |           |
+| Prunella_modularis       |        1516 |       378 |                          |             |           |
+| Scolopax_rusticola       |         167 |        41 |                          |             |           |
+| Sitta_europaea           |        4418 |       502 |                          |             |           |
+| Strix_aluco              |        1355 |       338 |                          |             |           |
+| Strix_nebulosa           |        1695 |       422 |                          |             |           |
+| Strix_uralensis          |        1760 |       439 |                          |             |           |
+| Sturnus_vulgaris         |       36200 |       593 |                          |             |           |
+| Sylvia_atricapilla       |        3737 |       500 |                          |             |           |
+| Sylvia_borin             |         168 |        42 |                          |             |           |
+| Troglodytes_troglodytes  |        1820 |       455 |                          |             |           |
+| Turdus_iliacus           |        1442 |       360 |                          |             |           |
+| Turdus_merula            |       20072 |       529 |                          |             |           |
+| Turdus_philomelos        |        2266 |       500 |                          |             |           |
+| Turdus_pilaris           |        8836 |       500 |                          |             |           |
+| Turdus_viscivorus        |        1133 |       283 |                          |             |           |
