@@ -2,4 +2,4 @@ data/*/
 data/*.tar
 models/*/
 models/*.tar
-**/.ipynb_checkpoints/**
+**/.ipynb_checkpoints/
